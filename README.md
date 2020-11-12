@@ -25,6 +25,9 @@ This CLI application allows users to log in or create their very own profiles be
 * Sinatra-activerecord - version 2.0
 * SQLite3 - version 1.4
 * Rest-Client
+* TTY-Prompt
+* TTY-ProgressBar
+* TTY-Font
 
 ## Setup
 To run this project, install it locally by cloning the GitHub repository and typing:
