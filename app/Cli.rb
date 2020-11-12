@@ -88,12 +88,12 @@ class Cli
     end
 
     def ask_what_to_do
-        result = @prompt.select("What would you like to do today?", ["Play Music", "Check My Reviews", "View All Reviews", "Add Song", "Exit"])
-            if result == "Play Music"
+        result = @prompt.select("What would you like to do today?", ["Find Music", "View MY Reviews", "View ALL Reviews", "Add Song", "Exit"])
+            if result == "Find Music"
                 ask_to_sort
-            elsif result == "Check My Reviews"
+            elsif result == "View MY Reviews"
                 check_my_reviews
-            elsif result == "View All Reviews"
+            elsif result == "View ALL Reviews"
                 view_reviews
             elsif result == "Add Song"
                 prompt_to_add_song
@@ -152,21 +152,21 @@ class Cli
     end
 
     def view_reviews
-        hello = []
+        @all_reviews = []
             Review.all.map do |review|
             Song.all.select do |song|
                 if review[:song_id] == song[:id]
-                    hello << song[:title]
-                    hello << song[:artist]
+                    @all_reviews << song[:title]
+                    @all_reviews << song[:artist]
                 else
                 end
             end
-            hello << review[:rating] 
-            hello << review[:content]
-            hello << "========================="
+            @all_reviews << review[:rating] 
+            @all_reviews << review[:content]
+            @all_reviews << "========================="
         end
         puts "==========================="
-        puts hello
+        puts @all_reviews
     end
 
 
@@ -177,18 +177,30 @@ class Cli
     end
 
     def sort_by_year
-        @year_choice = @prompt.select("Choose a year:",  @years )
+        @year_choice = @prompt.select("Choose a year:",  @years, "Back" )
+        if @year_choice == "Back"
+            ask_to_sort
+        else
         list_year_songs
+        end
     end
 
     def sort_by_artist
-        @artist_choice = @prompt.select("Choose an artist:",  @artists )
+        @artist_choice = @prompt.select("Choose an artist:",  @artists, "Back" )
+        if @artist_choice == "Back"
+            ask_to_sort
+        else
         list_artist_songs
+        end
     end
 
     def sort_by_genre 
-        @genre_choice = @prompt.select("Choose a genre:",  @genres )
+        @genre_choice = @prompt.select("Choose a genre:",  @genres, "Back" )
+        if @genre_choice == "Back"
+            ask_to_sort
+        else
         list_genre_songs
+        end
     end
 
     def randomsong
