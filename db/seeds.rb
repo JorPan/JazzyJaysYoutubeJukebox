@@ -48,6 +48,17 @@ song37 = Song.create(title: "Notorious B.I.G.", artist: "The Notorious B.I.G.", 
 song38 = Song.create(title: "Warning", artist: "The Notorious B.I.G.", genre: "Hip Hop", link: "https://www.youtube.com/watch?v=TbSm6HsX_ek", year: 1994)
 song39 = Song.create(title: "Gimme the Loot", artist: "The Notorious B.I.G.", genre: "Hip Hop", link: "https://www.youtube.com/watch?v=gXg7JccIppM", year: 1994)
 song40 = Song.create(title: "Flamboyant", artist: "Big L", genre: "Hip Hop", link: "https://www.youtube.com/watch?v=qA9grAxAZjE", year: 2000)
+song41 = Song.create(title: "Give Up The Funk", artist: "Parliament Funkadelic", genre: "Funk", link: "https://www.youtube.com/watch?v=gBWH3OWfT2Y", year: 1976)
+song42 = Song.create(title: "Flashlight", artist: "Parliament Funkadelic", genre: "Funk", link: "https://www.youtube.com/watch?v=4xQDMO__KZ0", year: 1977)
+song43 = Song.create(title: "Mothership Connection", artist: "Parliament Funkadelic", genre: "Funk", link: "https://www.youtube.com/watch?v=sSERB93GYfw", year: 1975)
+song44 = Song.create(title: "Shining Star", artist: "Earth, Wind & Fire", genre: "Funk", link: "https://www.youtube.com/watch?v=Zu9a29UR2dU", year: 1975)
+song45 = Song.create(title: "Jungle Boogie", artist: "Kool & The Gang", genre: "Funk", link: "https://www.youtube.com/watch?v=QGKiC2suCHQ", year: 1973)
+song46 = Song.create(title: "Brick House", artist: "Comodores", genre: "Funk", link: "https://www.youtube.com/watch?v=HhPu6GEoad8", year: 1977)
+song46 = Song.create(title: "Living For The City", artist: "Stevie Wonder", genre: "Soul", link: "https://www.youtube.com/watch?v=rc0XEw4m-3w", year: 1973)
+song47 = Song.create(title: "Superstition", artist: "Stevie Wonder", genre: "Soul", link: "https://www.youtube.com/watch?v=7_tmeHCO1IM", year: 1972)
+song48 = Song.create(title: "Get Down Tonight", artist: "KC and the Sunshine Band", genre: "Funk", link: "https://www.youtube.com/watch?v=LHEsE9yN2CY", year: 1975)
+song49 = Song.create(title: "Tell Me Something Good", artist: "Rufus", genre: "Funk", link: "https://www.youtube.com/watch?v=OB4JDJiet5M", year: 1974)
+song50 = Song.create(title: "Thank You", artist: "Sly & The Family Stone", genre: "Funk", link: "https://www.youtube.com/watch?v=NOa5UOHdwnc", year: 1970)
 
 
 
@@ -56,8 +67,12 @@ song40 = Song.create(title: "Flamboyant", artist: "Big L", genre: "Hip Hop", lin
 
 
 
-review1 = Review.create(user: user1, song: song4, rating: 5, content: "Suuuper funky.. slightly gangster :) ")
+
+
+
+review1 = Review.create(user: user1, song: song1, rating: 5, content: "Suuuper funky :) ")
 review2 = Review.create(user: user1, song: song25, rating: 5, content: "One of my new favorites! ")
+review3 = Review.create(user: user2, song: song37, rating: 5, content: "Classic ")
 
 
 
