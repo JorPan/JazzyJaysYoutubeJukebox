@@ -11,6 +11,7 @@ prompt = TTY::Prompt.new
 app = Cli.new
 app.welcome
 app.loading_bar
+app.clear
 app.ask_if_username
 app.ask_what_to_do
 sleep(3)

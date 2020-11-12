@@ -1,71 +1,62 @@
-# Mod 1 ActiveRecord Starter Repo
+## Jazzy JukeBox
+Everyone's favorite way to jam out!!
 
-In `config/database.yml`, you can change the name of the database from `db/cats.sqlite3` to whatever reflects your project. For example: `db/notes.sqlite3`. Doesn't really matter what you call the db. 
+## Table of contents
+General info
+Intro Video
+Technologies
+Setup
+Features
+Status
+Inspiration
+Contact
+License
+
+## General info
+This CLI application allows users to log in or create their very own profiles before starting their musical journey. The user is then able to select from a variety of songs, artists, categories, and publication! After jamming out to the provided youtube links, they can decide to add a review of their expierience from 1-5 as well as view their favorite songs or past reviews.
+
+## Intro Video
 
 
+## Technologies
+* Ruby - version 2.6.1
+* ActiveRecord - version 6.0
+* Sinatra - version 2.0
+* Sinatra-activerecord - version 2.0
+* SQLite3 - version 1.4
+* Rest-Client
 
-## ActiveRecord Methods
-These common ActiveRecord methods will help you interact with your database. Please refer to the ActiveRecord
-docs for what they do and how to use them. (If the docs talk about Rails, that is ok! ActiveRecord works very
- similar with or without Rails.)
+## Setup
+To run this project, install it locally by cloning the GitHub repository and typing:
+```ruby
+ruby runner.rb
 ```
-  .create (.new, .save)
-  .all
-  .count
-  .find
-  .find_by
-  .where
-```
 
-#### Notes
-
-*Remember*, any model that will have a corresponding table in the database needs to inherit from `ActiveRecord::Base`
-ex:
-```
-class Cat < ActiveRecord::Base
-  # customer methods defined here
-end
-```
-
-- To view database, you can run `sqlite3 db/cats.db`, then can run `.schema` or `.tables` and can run any SQL commands. (Don't need to do this anymore though! ActiveRecord gives us a schema file!)
+## Code Examples
+```ruby
+ `````
 
 
-### Steps to setup Ruby app with activerecord
-(New for ActiveRecord 6.0)
+## Features
+* Browse songs based on various attritutes.
+* Return all attributes from the song such as who made it and when.
+* Travel directly to your desired song via a provided link
+* Create a review for the song you just listened to and store it in our system
 
 
-## The following steps are already done for you in this boiler plate repo. 
-## The steps below are provided to you as a reference only. 
-## You're not expected to memorize this (please don't).
 
+To-do list:
+* Refactor code as well as add an api
 
-1. In root of project, run `bundle init`
-1. Add gems: 
-  `bundle add activerecord pry sinatra, sinatra-activerecord rake sqlite3 require_all`
-  run `bundle install`
-1. mkdir config and lib 
-1. mkdir lib/models
-1. touch config/environment.rb config/database.yml
-1. Create your model files and models (make sure to have your models inherit from ActiveRecord::Base)
-1. In config/environment.rb:
-```
-  require 'bundler/setup'
-  Bundler.require
+## Status
+Project is: Passed MVP stage and going into final project
 
-  require_all 'lib'
-```
-1. In config/database.yml:
-  ```
-  development:
-    adapter: sqlite3
-    database: db/cats.sqlite3
-  ```
-1. Touch Rakefile - require ‘config/environment.rb’ and require_relative ‘sinatra/activerecord/rake’ 
-1. Run rake -T to make sure we have access to raketasks
-1. Run `rake db:create_migration NAME=create_cats_table` (will create the db folder if it doesn’t already exist) and will add the migration file to db/migration
-1. Write migration file, then run `rake db:migrate`
-1. Then can see schema in file structure, can also drop into sqlite3 cats.db to see the tables and schema, but don’t really need to do that anymore. *Review rollback here*
-1. Create seeds in db/seeds.rb and run `rake db:seed`
-1. Now can put a pry in environment.rb to run <ModelName>.all and see your seeds.
+## Inspiration
+The Jazzy Jukebox was impacted by the creators love for music and was designed to mimick/modernize the old style of the orignal dinner experience(COVID free)
 
-Make sure your models inherit from `ActiveRecord::Base`
+## Contact
+Created by [Javaria Brascom](https://www.linkedin.com/in/javaria-brascom-0510991bb/) and [Jordan Panasewicz](https://github.com/JorPan)
+
+Feel free to connect with us using the links above.
+
+## License
