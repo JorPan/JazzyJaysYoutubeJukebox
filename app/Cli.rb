@@ -194,15 +194,16 @@ class Cli
     def searching_artists
         searching_bar
         artist_songs = Song.where artist: "#{@desired_artist}"
-        if artist_songs
+        if artist_songs.length >= 1
             artist_songs.map do |song|
                 puts song[:title]
                 puts song[:artist]
                 puts song[:genre]
                 puts song[:year]
-                puts song[:link]
+                # puts song[:link]
                 separate
             end
+            ask_to_play
         else
             puts "Sorry, we don't have any songs by that artist."
             addsong = @prompt.yes?("Would you like to add a song?")
@@ -216,13 +217,13 @@ class Cli
 
     def searching_songs
         searching_bar
-        song = Song.find_by title: "#{@desired_song}"
-        if song
-            puts song[:title]
-            puts song[:artist]
-            puts song[:genre]
-            puts song[:year]
-            puts song[:link]
+        @song_choice = Song.find_by title: "#{@desired_song}"
+        if @song_choice
+            puts @song_choice[:title]
+            puts @song_choice[:artist]
+            puts @song_choice[:genre]
+            puts @song_choice[:year]
+            puts @song_choice[:link]
             separate
             leave_review
         else
@@ -236,37 +237,25 @@ class Cli
         end
     end
 
-    # def view_reviews
-    #     @all_reviews = []
-    #         Review.all.map do |review|
-    #         Song.all.select do |song|
-    #             if review[:song_id] == song[:id]
-    #                 @all_reviews << song[:title]
-    #                 @all_reviews << song[:artist]
-    #             else
-    #             end
-    #         end
-    #         @all_reviews << review[:rating] 
-    #         @all_reviews << review[:content]
-    #         @all_reviews << "========================="
-    #     end
-    #     puts "==========================="
-    #     puts @all_reviews
-    # end
-
-
     def view_reviews
-        Review.all.map do |review|
-            separate
-            puts review[:rating]
-            puts review[:content]
-            song = Song.find_by id: "#{review[:song_id]}"
-            puts song[:title]
-            puts song[:artist]
+        @all_reviews = []
+            Review.all.map do |review|
+            Song.all.select do |song|
+                if review[:song_id] == song[:id]
+                    @all_reviews << song[:title]
+                    @all_reviews << song[:artist]
+                else
+                end
+            end
+            @all_reviews << review[:rating] 
+            @all_reviews << review[:content]
             user = User.find_by id: "#{review[:user_id]}"
-            puts "Written by: #{user[:username]}"            
+            @all_reviews << "Written by: #{user[:username]}" 
+            @all_reviews << "========================="
         end
         separate
+        puts @all_reviews
+        ask_what_to_do
     end
 
 
@@ -306,9 +295,9 @@ class Cli
 
     def ask_which_song
         choice = @prompt.ask("Which song would you like to play? Just type in the title here:")
-        song = Song.find_by title: "#{choice}"
+        @song_choice = Song.find_by title: "#{choice}"
         separate
-        puts song[:artist], song[:title], song[:genre], song[:year], song[:link]
+        puts @song_choice[:artist], @song_choice[:title], @song_choice[:genre], @song_choice[:year], @song_choice[:link]
         separate
         leave_review
     end

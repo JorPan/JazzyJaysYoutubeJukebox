@@ -30,9 +30,21 @@ This CLI application allows users to log in or create their very own profiles be
 * TTY-Font
 
 ## Setup
-To run this project, install it locally by cloning the GitHub repository and typing:
-```ruby
-ruby runner.rb
+To run this project, install it locally by cloning the GitHub repository, going to your terminal and typing the following commands in order:
+```zsh
+$ git clone (paste git clone url here)
+```
+```zsh
+$ bundle install
+```
+```zsh
+$ rake migrate
+```
+```zsh
+$ rake db:seed
+```
+```zsh
+$ ruby runner.rb
 ```
 
 ## Code Examples
@@ -41,9 +53,12 @@ ruby runner.rb
 
 
 ## Features
-* Browse songs based on various attritutes.
+* Browse songs based on various attritutes: genre, year, artist, or rating. 
 * Return all attributes from the song such as who made it and when.
-* Travel directly to your desired song via a provided link
+* Listen to your desired song via a provided youtube link
+* Search for songs or artists
+* Add songs to the library
+* View reviews left by other users
 * Create a review for the song you just listened to and store it in our system
 
 

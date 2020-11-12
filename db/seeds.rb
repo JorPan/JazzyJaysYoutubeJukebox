@@ -6,7 +6,12 @@ Song.destroy_all
 
 user1 = User.create(name: "Jordan", username: "JorPan", password: "123")
 user2 = User.create(name: "Javaria", username: "JazzyJay", password: "123")
-user3 = User.create(name: "Colter", username: "ColtUlrich", password: "123")
+user3 = User.create(name: "Colter", username: "ColtUlrich222", password: "123")
+user4 = User.create(name: "Cass", username: "Casstastrophe", password: "123")
+user5 = User.create(name: "Ahmed", username: "RockOn420", password: "123")
+user6 = User.create(name: "Damon", username: "DapperDamon", password: "123")
+user7 = User.create(name: "Kyle", username: "KillerKyle1", password: "123")
+
 
 song1 = Song.create(title: "Stuntin", artist: "The Floozies", genre: "Funky Bass", link: "https://www.youtube.com/watch?v=5hL_ck7injw", year: 2013)
 song2 = Song.create(title: "Sunroof Cadillac", artist: "The Floozies", genre: "Funky Bass", link: "https://www.youtube.com/watch?v=PgDz5-tfnTY", year: 2012)
@@ -54,11 +59,11 @@ song43 = Song.create(title: "Mothership Connection", artist: "Parliament Funkade
 song44 = Song.create(title: "Shining Star", artist: "Earth, Wind & Fire", genre: "Funk", link: "https://www.youtube.com/watch?v=Zu9a29UR2dU", year: 1975)
 song45 = Song.create(title: "Jungle Boogie", artist: "Kool & The Gang", genre: "Funk", link: "https://www.youtube.com/watch?v=QGKiC2suCHQ", year: 1973)
 song46 = Song.create(title: "Brick House", artist: "Comodores", genre: "Funk", link: "https://www.youtube.com/watch?v=HhPu6GEoad8", year: 1977)
-song46 = Song.create(title: "Living For The City", artist: "Stevie Wonder", genre: "Soul", link: "https://www.youtube.com/watch?v=rc0XEw4m-3w", year: 1973)
 song47 = Song.create(title: "Superstition", artist: "Stevie Wonder", genre: "Soul", link: "https://www.youtube.com/watch?v=7_tmeHCO1IM", year: 1972)
 song48 = Song.create(title: "Get Down Tonight", artist: "KC and the Sunshine Band", genre: "Funk", link: "https://www.youtube.com/watch?v=LHEsE9yN2CY", year: 1975)
 song49 = Song.create(title: "Tell Me Something Good", artist: "Rufus", genre: "Funk", link: "https://www.youtube.com/watch?v=OB4JDJiet5M", year: 1974)
 song50 = Song.create(title: "Thank You", artist: "Sly & The Family Stone", genre: "Funk", link: "https://www.youtube.com/watch?v=NOa5UOHdwnc", year: 1970)
+song51 = Song.create(title: "Living For The City", artist: "Stevie Wonder", genre: "Soul", link: "https://www.youtube.com/watch?v=rc0XEw4m-3w", year: 1973)
 
 
 
@@ -68,11 +73,17 @@ song50 = Song.create(title: "Thank You", artist: "Sly & The Family Stone", genre
 
 
 
-
-
-review1 = Review.create(user: user1, song: song1, rating: 5, content: "Suuuper funky :) ")
-review2 = Review.create(user: user1, song: song25, rating: 5, content: "One of my new favorites! ")
-review3 = Review.create(user: user2, song: song37, rating: 5, content: "Classic ")
+review1 = Review.create(user: user1, song: song4, rating: 4, content: "Suuuper funky.. slightly gangster :) ")
+review2 = Review.create(user: user4, song: song25, rating: 5, content: "One of my new favorites! ")
+review8 = Review.create(user: user2, song: song29, rating: 5, content: "I'm dripped down to my socks after listening to this song! ")
+review3 = Review.create(user: user2, song: song37, rating: 5, content: " I LOVE IT WHEN THEY CALL ME BIG PAPPA")
+review4 = Review.create(user: user3, song: song33, rating: 4, content: "IM DEFINITLY PLAYING THIS IN THE NEXT ZOOM MEETING ")
+review6 = Review.create(user: user7, song: song22, rating: 3, content: "I'm gooing to go slice some stuff now! ")
+review7 = Review.create(user: user6, song: song22, rating: 1, content: "don't understand this genre")
+review9 = Review.create(user: user3, song: song20, rating: 5, content: "Love the trumpet!")
+review5 = Review.create(user: user2, song: song28, rating: 1, content: "Too funky with no warning, granmda had a heart attack!! ")
+review9 = Review.create(user: user4, song: song46, rating: 4, content: "She's a BRICK....HOUSE")
+review10 = Review.create(user: user7, song: song42, rating: 1, content: "Sounds like the lead singer is on crack")
 
 
 
