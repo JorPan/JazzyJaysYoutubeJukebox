@@ -106,3 +106,4 @@ Created by [Jordan Panasewicz](https://www.linkedin.com/in/jordan-panasewicz-77a
 Feel free to connect with us using the links above.
 
 ## License
+[License](https://github.com/JorPan/JazzyJukebox/blob/master/license.txt) 
