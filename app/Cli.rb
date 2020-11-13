@@ -102,7 +102,8 @@ class Cli
     end
 
     def log_in_user
-        puts "Welcome back, #{@username}"
+        clear
+        puts @pastel.cyan(@font.write("     #{@username}     "))
         ask_what_to_do
     end
 
@@ -140,7 +141,7 @@ class Cli
         youtube = @prompt.ask("Please paste the youtube link directly:")
         year = @prompt.ask("What year was this released? Please provide accurate information!")
         Song.create(title: songtitle, artist: artistname, genre: genre, link: youtube, year: year)
-        puts "Thank you for your contribution! You will have to log out and back in to see your added song in the library"
+        puts "Thank you for your contribution!"
     end
 
     def check_my_reviews
@@ -261,7 +262,7 @@ class Cli
 
     def sort_by_rating
         @rating_choice = @prompt.select("Filter by rating:",  "5", "4", "3", "2", "1", "Back" )
-        if @year_choice == "Back"
+        if @rating_choice == "Back"
             ask_to_sort
         else
         list_rating_songs

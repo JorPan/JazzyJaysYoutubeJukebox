@@ -13,10 +13,10 @@ Contact
 License
 
 ## General info
-This CLI application allows users to log in or create their very own profiles before starting their musical journey. The user is then able to select from a variety of songs, artists, categories, and publication! After jamming out to the provided youtube links, they can decide to add a review of their expierience from 1-5 as well as view their favorite songs or past reviews.
+This CLI application allows users to log in or create their very own profiles before starting their musical journey. The user is then able to select from a variety of songs, artists, categories, and publication! After jamming out to the provided youtube links, they can decide to add a review of their experience from 1-5 as well as view their favorite songs or past reviews.
 
 ## Intro Video
-
+[Jazzy Jay's Youtube Jukebox Intro Video](https://youtu.be/XYX37R1wbqg)
 
 ## Technologies
 * Ruby - version 2.6.1
