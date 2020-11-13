@@ -1,4 +1,4 @@
-## Jazzy JukeBox
+## Jazzy Jay's Youtube JukeBox
 A Ruby & ActiveRecord remix of the classic Jukebox - Everyone's favorite way to jam out!!
 
 ## Table of contents
