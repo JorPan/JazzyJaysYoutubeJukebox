@@ -334,7 +334,7 @@ class Cli
         separate
         puts @song_choice[:artist], @song_choice[:title], @song_choice[:year], @song_choice[:genre], @song_choice[:link]
         separate
-        sleep(3)
+        sleep(2)
         leave_review
     end
 
@@ -404,7 +404,7 @@ class Cli
     def leave_review
         review_push = @prompt.select("Would you like to leave a review for that song?", %w(Yes No))
         if review_push == "Yes"
-            songrating = @prompt.select("Pick a rating", %w(1 2 3 4 5))
+            songrating = @prompt.select("Pick a rating - 5 is the best, 1 is the worst:", %w(1 2 3 4 5))
             content = @prompt.ask("What did you think?!")
             Review.create(user: @user, song: @song_choice, rating: songrating, content: content)
             ask_another_song

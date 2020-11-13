@@ -73,7 +73,7 @@ song51 = Song.create(title: "Living For The City", artist: "Stevie Wonder", genr
 
 
 
-review1 = Review.create(user: user1, song: song4, rating: 4, content: "Suuuper funky.. slightly gangster :) ")
+review1 = Review.create(user: user1, song: song1, rating: 4, content: "Suuuper funky.. :) ")
 review2 = Review.create(user: user4, song: song25, rating: 5, content: "One of my new favorites! ")
 review8 = Review.create(user: user2, song: song29, rating: 5, content: "I'm dripped down to my socks after listening to this song! ")
 review3 = Review.create(user: user2, song: song37, rating: 5, content: " I LOVE IT WHEN THEY CALL ME BIG PAPPA")
