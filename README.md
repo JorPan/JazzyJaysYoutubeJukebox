@@ -38,7 +38,7 @@ $ git clone (paste git clone url here)
 $ bundle install
 ```
 ```zsh
-$ rake migrate
+$ rake db:migrate
 ```
 ```zsh
 $ rake db:seed
