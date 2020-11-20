@@ -238,27 +238,21 @@ class Cli
         end
     end
 
+
+
     def view_reviews
-        @all_reviews = []
-            Review.all.map do |review|
-            Song.all.select do |song|
-                if review[:song_id] == song[:id]
-                    @all_reviews << song[:title]
-                    @all_reviews << song[:artist]
-                else
-                end
-            end
-            @all_reviews << review[:rating] 
-            @all_reviews << review[:content]
-            user = User.find_by id: "#{review[:user_id]}"
-            @all_reviews << "Written by: #{user[:username]}" 
-            @all_reviews << "========================="
+        Review.all.map do |review|
+            reviewed_song = Song.find_by id: review[:song_id]
+            reviewing_user = User.find_by id: review[:user_id]
+            puts reviewed_song.title
+            puts reviewed_song.artist
+            puts review[:rating]
+            puts review[:content]
+            puts reviewing_user.username
+            separate
         end
-        separate
-        puts @all_reviews
         ask_what_to_do
     end
-
 
     def sort_by_rating
         @rating_choice = @prompt.select("Filter by rating:",  "5", "4", "3", "2", "1", "Back" )
